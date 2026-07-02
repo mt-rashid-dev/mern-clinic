@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/utility/layout/Layout.jsx";
+import Home from "./components/home/Home.jsx";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={"/"} element={<Layout>
-            <div className={"text-success"}>This is home page</div>
+            <Home/>
           </Layout>}/>
         </Routes>
       </BrowserRouter>
