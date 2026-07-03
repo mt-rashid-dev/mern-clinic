@@ -1,5 +1,35 @@
+:root {
+  --color-1: #008080;
+  --color-2: #fff;
+  --color-3: #e0e0e0;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.link-light-2 {
+  color: var(--color-1);
+}
+
+.btn-light-2 {
+  background-color: var(--color-1);
+  color: var(--color-2);
+  border: 0;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 4px;
+  padding-bottom: 6px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.bg-light-2 {
+  background-color: var(--color-2);
+}
+
+.bg-light-3 {
+  background-color: var(--color-3);
 }
