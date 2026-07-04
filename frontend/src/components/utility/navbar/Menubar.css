@@ -1,6 +1,11 @@
 .Menubar {
   height: 50px;
   padding: 0 8px;
+  transition: background-color 0.2s linear;
+}
+
+#menubarDropdownButton {
+  transition: background-color 0.2s linear;
 }
 
 .Menubar-dropdown-content {

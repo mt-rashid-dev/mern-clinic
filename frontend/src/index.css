@@ -2,8 +2,12 @@
   --color-1: #008080;
   --color-2: #fff;
   --color-3: #e0e0e0;
-  --color-4: #009090;
+  --color-4: #00a0a0;
   --color-5: #2a2a2a;
+  --color-6: #00d0d0;
+  --color-7: #00f0f0;
+  --color-8: #1a1a1a;
+  --color-9: #000;
 }
 
 * {
@@ -18,6 +22,14 @@
 
 .link-light-2:hover {
   color: var(--color-4);
+}
+
+.link-dark-2 {
+  color: var(--color-6);
+}
+
+.link-dark-2:hover {
+  color: var(--color-7);
 }
 
 .btn-light-2 {
@@ -43,8 +55,14 @@
 
 .bg-light-3 {
   background-color: var(--color-3);
+  color: var(--color-9);
 }
 
 .bg-dark-2 {
   background-color: var(--color-5);
+}
+
+.bg-dark-3 {
+  background-color: var(--color-8);
+  color: var(--color-2);
 }
