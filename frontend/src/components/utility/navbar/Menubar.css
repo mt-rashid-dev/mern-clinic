@@ -5,7 +5,6 @@
 
 .Menubar-dropdown-content {
   display: none;
-  border-radius: 8px;
 }
 
 .Menubar-dropdown:hover .Menubar-dropdown-content {

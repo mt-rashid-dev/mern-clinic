@@ -11,7 +11,6 @@ const Menubar = () => {
   const [themeIcon, setThemeIcon] = useState(<i className="bi bi-moon"></i>);
 
   useEffect(() => {
-    console.log(theme);
     toggleStyle();
   }, [theme]);
 
@@ -27,15 +26,25 @@ const Menubar = () => {
 
   const toggleStyle = () => {
     const menubar = document.getElementById("menubar");
+    const menubarDropdownButton = document.getElementById("menubarDropdownButton");
+    const menubarDropdownContent = document.getElementById("menubarDropdownContent");
 
     if (theme === "dark") {
       menubar.classList.remove("bg-light-2");
       menubar.classList.add("bg-dark-2");
+      menubarDropdownButton.classList.remove("bg-light-2");
+      menubarDropdownButton.classList.add("bg-dark-2");
+      menubarDropdownContent.classList.remove("bg-light-2");
+      menubarDropdownContent.classList.add("bg-dark-2");
     }
 
     if (theme === "light") {
       menubar.classList.remove("bg-dark-2");
       menubar.classList.add("bg-light-2");
+      menubarDropdownButton.classList.remove("bg-dark-2");
+      menubarDropdownButton.classList.add("bg-light-2");
+      menubarDropdownContent.classList.remove("bg-dark-2");
+      menubarDropdownContent.classList.add("bg-light-2");
     }
   };
 
@@ -52,11 +61,13 @@ const Menubar = () => {
         <div><Link to={"/"} className={"link-light-2 text-decoration-none fw-bold"}>Appointment</Link></div>
         <div><Link to={"/"} className={"link-light-2 text-decoration-none fw-bold"}>Dashboard</Link></div>
         <div className={"Menubar-dropdown position-relative d-flex align-items-center h-100"}>
-          <button className={"link-light-2 bg-light-2 text-decoration-none fw-bold h-100 border-0"}>More</button>
-          <div className={"Menubar-dropdown-content bg-light-2 position-absolute top-100 py-2"}>
-            <div className={"px-3 pb-1"}><Link to={"/"} className={"link-light-2 text-decoration-none fw-bold"}>About</Link></div>
-            <div className={"px-3 pb-1"}><Link to={"/"} className={"link-light-2 text-decoration-none fw-bold"}>Contact</Link></div>
-            <div className={"px-3"}><Link to={"/"} className={"link-light-2 text-decoration-none fw-bold"}>FAQ</Link></div>
+          <button className={"link-light-2 bg-light-2 text-decoration-none fw-bold h-100 border-0"} id={"menubarDropdownButton"}>More</button>
+          <div className={"Menubar-dropdown-content position-absolute top-100 pt-1"}>
+            <div className={"bg-light-2 rounded-3 py-2"} id={"menubarDropdownContent"}>
+              <div className={"px-3 pb-1"}><Link to={"/"} className={"link-light-2 text-decoration-none fw-bold"}>About</Link></div>
+              <div className={"px-3 pb-1"}><Link to={"/"} className={"link-light-2 text-decoration-none fw-bold"}>Contact</Link></div>
+              <div className={"px-3"}><Link to={"/"} className={"link-light-2 text-decoration-none fw-bold"}>FAQ</Link></div>
+            </div>
           </div>
         </div>
       </div>
